@@ -99,6 +99,18 @@
     <Compile Include="Bai04.Designer.cs">
       <DependentUpon>Bai04.cs</DependentUpon>
     </Compile>
+    <Compile Include="B4_TCP_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B4_TCP_Server.Designer.cs">
+      <DependentUpon>B4_TCP_Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B4_TCP_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B4_TCP_Client.Designer.cs">
+      <DependentUpon>B4_TCP_Client.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lab3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,12 @@
     <EmbeddedResource Include="B3_TCP_Server.resx">
       <DependentUpon>B3_TCP_Server.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="B4_TCP_Client.resx">
+      <DependentUpon>B4_TCP_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B4_TCP_Server.resx">
+      <DependentUpon>B4_TCP_Server.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bai01.resx">
       <DependentUpon>Bai01.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bai03.resx">
       <DependentUpon>Bai03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bai04.resx">
+      <DependentUpon>Bai04.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab3.resx">
       <DependentUpon>Lab3.cs</DependentUpon>

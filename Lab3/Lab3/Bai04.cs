@@ -16,5 +16,31 @@ namespace Lab3
         {
             InitializeComponent();
         }
+
+        private void Server_btn_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["B4_TCP_Server"];
+
+            if (frm != null)
+                frm.BringToFront();
+            else
+            {
+                frm = new B4_TCP_Server();
+                frm.Show();
+            }
+        }
+
+        private void Client_btn_Click(object sender, EventArgs e)
+        {
+                B4_TCP_Client frm = new B4_TCP_Client();
+                frm.Show();
+        }
+
+        private void Exit_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Lab3 lab3 = new Lab3();
+            lab3.Show();
+        }
     }
 }
