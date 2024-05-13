@@ -63,7 +63,7 @@ namespace Lab3
             catch
             {
 
-                AddText("Lỗi xử lý client");
+                AddText("Lỗi xử lý client ");
 
             }
             finally

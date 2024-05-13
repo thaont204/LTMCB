@@ -21,10 +21,12 @@ namespace Lab3
         IPEndPoint server;
         TcpClient client = new TcpClient();
         NetworkStream stream;
+        bool is_connected = false;
+
 
         private async void ListenToServer()
         {
-            while (client.Connected)
+            while (is_connected)
             {
                 string mess = "";
                 byte[] data = new byte[4096];
@@ -38,7 +40,7 @@ namespace Lab3
                 }
                 catch
                 {
-                    MessageBox.Show("Lỗi listening to server!!");
+                    MessageBox.Show("Disconected!!");
                 }
             }
         }
@@ -62,7 +64,7 @@ namespace Lab3
                 }
                 catch
                 {
-                    MessageBox.Show("Chua mo server");
+                    MessageBox.Show("Chua mo server, khong the gui");
                     return;
                 }
                 if (client.Connected)
@@ -89,7 +91,21 @@ namespace Lab3
         {
             CheckForIllegalCrossThreadCalls = false;
             Chat_box.ReadOnly = true;
+            Connect_btn.BackColor = Color.LightCoral;
+        }
 
+        private void Connect_btn_Click(object sender, EventArgs e)
+        {
+            is_connected = !is_connected;
+            if (is_connected == false)
+            {
+                client.Close();
+                this.Hide();
+                return;
+            }
+
+
+            Connect_btn.BackColor = Color.LightBlue;
             server = new IPEndPoint(IPAddress.Parse(address), port);
             try
             {
@@ -97,10 +113,13 @@ namespace Lab3
             }
             catch
             {
+                Connect_btn.BackColor= Color.LightCoral;
                 MessageBox.Show("Chua mo server");
             }
             if (client.Connected)
             {
+                is_connected = true;
+                Connect_btn.BackColor = Color.LightGreen;
                 stream = client.GetStream();
                 Thread listen = new Thread(ListenToServer); listen.Start();
             }

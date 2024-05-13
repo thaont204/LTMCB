@@ -34,6 +34,7 @@
             this.Mess_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Connect_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Chat_box
@@ -86,11 +87,22 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Messages";
             // 
+            // Connect_btn
+            // 
+            this.Connect_btn.Location = new System.Drawing.Point(587, 314);
+            this.Connect_btn.Name = "Connect_btn";
+            this.Connect_btn.Size = new System.Drawing.Size(160, 44);
+            this.Connect_btn.TabIndex = 6;
+            this.Connect_btn.Text = "Connect";
+            this.Connect_btn.UseVisualStyleBackColor = true;
+            this.Connect_btn.Click += new System.EventHandler(this.Connect_btn_Click);
+            // 
             // B4_TCP_Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Connect_btn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Mess_box);
@@ -113,5 +125,6 @@
         private System.Windows.Forms.TextBox Mess_box;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Connect_btn;
     }
 }
