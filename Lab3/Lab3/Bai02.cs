@@ -44,7 +44,8 @@ namespace Lab3
                     bytesReceived = clientSocket.Receive(recv);
                     text += Encoding.ASCII.GetString(recv);
                 } while (text[text.Length-1] != '\n');
-                Mess_lv.Items.Add(new ListViewItem(text));
+                if (!string.IsNullOrWhiteSpace(text))
+                    Mess_lv.Items.Add(text);
             }
             clientSocket.Close();
         }
