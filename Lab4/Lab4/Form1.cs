@@ -40,7 +40,9 @@ namespace Lab4
 
         private void Bai4_btn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Bai4 bai4 = new Bai4();
+            bai4.Show();    
         }
     }
 }
