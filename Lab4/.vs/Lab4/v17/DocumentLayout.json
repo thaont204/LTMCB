@@ -1,7 +1,32 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\Lab4\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\ltm\\ltmcb\\lab4\\lab4\\bai4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|solutionrelative:lab4\\bai4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\ltm\\ltmcb\\lab4\\lab4\\bai4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|solutionrelative:lab4\\bai4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\ltm\\ltmcb\\lab4\\lab4\\bai1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|solutionrelative:lab4\\bai1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\ltm\\ltmcb\\lab4\\lab4\\html_src.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|solutionrelative:lab4\\html_src.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\ltm\\ltmcb\\lab4\\lab4\\bai2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|solutionrelative:lab4\\bai2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\ltm\\ltmcb\\lab4\\lab4\\bai2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4DD453E-0E43-4830-A95A-6A17AEAB181E}|Lab4\\Lab4.csproj|solutionrelative:lab4\\bai2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +47,80 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Bai2.cs",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\Bai2.cs",
+              "RelativeDocumentMoniker": "Lab4\\Bai2.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\Bai2.cs",
+              "RelativeToolTip": "Lab4\\Bai2.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAADoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T14:54:44.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Bai2.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\Bai2.cs",
+              "RelativeDocumentMoniker": "Lab4\\Bai2.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\Bai2.cs [Design]",
+              "RelativeToolTip": "Lab4\\Bai2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T14:54:42.235Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Bai4.cs",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\Bai4.cs",
+              "RelativeDocumentMoniker": "Lab4\\Bai4.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\Bai4.cs",
+              "RelativeToolTip": "Lab4\\Bai4.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwGkAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T14:45:06.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Bai4.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\Bai4.cs",
+              "RelativeDocumentMoniker": "Lab4\\Bai4.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\Bai4.cs [Design]",
+              "RelativeToolTip": "Lab4\\Bai4.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T14:43:28.703Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HTML_src.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\HTML_src.cs",
+              "RelativeDocumentMoniker": "Lab4\\HTML_src.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\HTML_src.cs [Design]",
+              "RelativeToolTip": "Lab4\\HTML_src.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T14:43:25.248Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Bai1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\Bai1.cs",
+              "RelativeDocumentMoniker": "Lab4\\Bai1.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\LTM\\LTMCB\\Lab4\\Lab4\\Bai1.cs [Design]",
+              "RelativeToolTip": "Lab4\\Bai1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T14:43:15.243Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

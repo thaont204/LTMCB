@@ -36,3 +36,24 @@ C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THA
 C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab4\Lab4\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab4\Lab4\bin\Debug\HtmlAgilityPack.xml
 C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab4\Lab4\obj\Debug\Lab4.HTML_src.resources
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\bin\Debug\Lab4.exe.config
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\bin\Debug\Lab4.exe
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\bin\Debug\Lab4.pdb
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.csproj.AssemblyReference.cache
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.Bai1.resources
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.Bai2.resources
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.Bai3.resources
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.Bai4.resources
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.Form1.resources
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.HTML_src.resources
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.csproj.GenerateResource.cache
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.csproj.CoreCompileInputs.cache
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.csproj.Up2Date
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.exe
+C:\Users\Thao\Downloads\c++\LTM\LTMCB\Lab4\Lab4\obj\Debug\Lab4.pdb
