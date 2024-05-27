@@ -1,0 +1,79 @@
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\bin\Debug\Lab3.exe.config
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\bin\Debug\Lab3.exe
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\bin\Debug\Lab3.pdb
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.csproj.AssemblyReference.cache
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.B1_UDP_Client.resources
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.B1_UDP_Server.resources
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.Bai01.resources
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.Lab3.resources
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.Properties.Resources.resources
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.csproj.GenerateResource.cache
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.exe
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.pdb
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.Bai02.resources
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.Bai03.resources
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.B3_TCP_Server.resources
+C:\Users\Thao\Downloads\c++\Lab3\Lab3\obj\Debug\Lab3.B3_TCP_Client.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\bin\Debug\Lab3.exe.config
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\bin\Debug\Lab3.exe
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\bin\Debug\Lab3.pdb
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.csproj.SuggestedBindingRedirects.cache
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.B1_UDP_Client.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.B1_UDP_Server.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.B3_TCP_Client.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.B3_TCP_Server.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.B4_TCP_Client.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.Bai01.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.Bai02.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.Bai03.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.Bai04.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.Lab3.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.Properties.Resources.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.csproj.GenerateResource.cache
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.exe
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.pdb
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\lab3\Lab3\Lab3\obj\Debug\Lab3.B4_TCP_Server.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\bin\Debug\Lab3.exe.config
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\bin\Debug\Lab3.exe
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\bin\Debug\Lab3.pdb
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.csproj.SuggestedBindingRedirects.cache
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.B1_UDP_Client.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.B1_UDP_Server.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.B3_TCP_Client.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.B3_TCP_Server.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.B4_TCP_Client.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.B4_TCP_Server.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.Bai01.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.Bai02.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.Bai03.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.Bai04.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.Lab3.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.Properties.Resources.resources
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.csproj.GenerateResource.cache
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.exe
+C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab3\Lab3\obj\Debug\Lab3.pdb
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\bin\Debug\Lab3.exe.config
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\bin\Debug\Lab3.exe
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\bin\Debug\Lab3.pdb
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.csproj.AssemblyReference.cache
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.B1_UDP_Client.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.B1_UDP_Server.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.B3_TCP_Client.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.B3_TCP_Server.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.B4_TCP_Client.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.B4_TCP_Server.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.Bai01.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.Bai02.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.Bai03.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.Bai04.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.Lab3.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.Properties.Resources.resources
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.csproj.GenerateResource.cache
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.exe
+C:\Users\Thao\Downloads\c++\LTM\Lab3\Lab3\obj\Debug\Lab3.pdb
