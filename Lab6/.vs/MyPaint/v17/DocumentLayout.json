@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\network-programming-lab-master\\lab06\\mypaint\\socketdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\socketdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\network-programming-lab-master\\lab06\\mypaint\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\network-programming-lab-master\\lab06\\mypaint\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\network-programming-lab-master\\lab06\\mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\network-programming-lab-master\\lab06\\mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SocketData.cs",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\SocketData.cs",
+              "RelativeDocumentMoniker": "MyPaint\\SocketData.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\SocketData.cs",
+              "RelativeToolTip": "MyPaint\\SocketData.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T08:00:42.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Client.cs",
+              "RelativeDocumentMoniker": "MyPaint\\Client.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Client.cs",
+              "RelativeToolTip": "MyPaint\\Client.cs",
+              "ViewState": "AQIAAKMAAAAAAAAAAAAAwLAAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T08:10:51.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Client.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Client.cs",
+              "RelativeDocumentMoniker": "MyPaint\\Client.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Client.cs [Design]",
+              "RelativeToolTip": "MyPaint\\Client.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T07:57:18.01Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Server.cs",
+              "RelativeDocumentMoniker": "MyPaint\\Server.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Server.cs",
+              "RelativeToolTip": "MyPaint\\Server.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAYwJYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T08:01:22.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Server.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Server.cs",
+              "RelativeDocumentMoniker": "MyPaint\\Server.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Server.cs [Design]",
+              "RelativeToolTip": "MyPaint\\Server.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T07:57:16.503Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
