@@ -13,14 +13,18 @@ namespace MyPaint
 {
     public partial class frm_Server : Form
     {
+        MailRepository mailRepository;
+
         private TcpListener server;
         private List<TcpClient> clientList;
         private int maxClients = 5; // Maximum number of clients allowed
 
-        public frm_Server()
+        public frm_Server(MailRepository mailRepository)
         {
             CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
+            this.mailRepository = mailRepository;
+            mailRepository.ConnectStmpServer("smtp.gmail.com", 465, true);
             clientList = new List<TcpClient>();
             StartServer();
         }
@@ -101,6 +105,8 @@ namespace MyPaint
         {
             if (clientList.Count >= maxClients)
             {
+                mailRepository.SendMail("Cảnh báo", "Số lượng client đạt đến giới hạn", "22521371@gm.uit.edu.vn");
+
                 MessageBox.Show("Quá số lượng client cho phép!");
                 return;
             }

@@ -211,9 +211,11 @@ namespace MyPaint
             while (true)
             {
                 byte[] data = new byte[4096*10];
-                await stream.ReadAsync(data, 0, data.Length);
+                
                 try
                 {
+                    await stream.ReadAsync(data, 0, data.Length);
+
                     Packet packet = new Packet(data);
                     int len = packet.ReadInt();
                     DataType dataType = (DataType)packet.ReadInt();
@@ -246,9 +248,10 @@ namespace MyPaint
                 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error in Receive method: " + ex.Message);
+                    //MessageBox.Show("Error in Receive method: " + ex.Message);
                     // Handle exceptions or close the connection
                     Close();
+                    break;
                 }
             }
 

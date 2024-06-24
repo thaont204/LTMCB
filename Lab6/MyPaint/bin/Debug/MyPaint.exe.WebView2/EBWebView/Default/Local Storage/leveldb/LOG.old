@@ -1,3 +1,6 @@
-2024/06/24-13:25:09.108 9038 Reusing MANIFEST C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab6\MyPaint\bin\Debug\MyPaint.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2024/06/24-13:25:09.112 9038 Recovering log #4
-2024/06/24-13:25:09.114 9038 Reusing old log C:\Users\ADMIN\Documents\HocTap\HK4\Lap Tring Mang Can Ban\Thuc Hanh\GIT_CUA_THAO\Lab6\MyPaint\bin\Debug\MyPaint.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000004.log 
+2024/06/24-23:19:31.529 f4c Reusing MANIFEST C:\Users\Thao\Downloads\c++\Lab\LTMCB\Lab6\MyPaint\bin\Debug\MyPaint.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2024/06/24-23:19:31.535 f4c Recovering log #4
+2024/06/24-23:19:31.541 f4c Reusing old log C:\Users\Thao\Downloads\c++\Lab\LTMCB\Lab6\MyPaint\bin\Debug\MyPaint.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000004.log 
+2024/06/24-23:19:42.805 67e8 Level-0 table #7: started
+2024/06/24-23:19:42.812 67e8 Level-0 table #7: 102109 bytes OK
+2024/06/24-23:19:42.814 67e8 Delete type=0 #4

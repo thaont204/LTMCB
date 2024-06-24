@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\",
+  "WorkspaceRootPath": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\network-programming-lab-master\\lab06\\mypaint\\socketdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\socketdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\network-programming-lab-master\\lab06\\mypaint\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\lab\\ltmcb\\lab6\\mypaint\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\network-programming-lab-master\\lab06\\mypaint\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\lab\\ltmcb\\lab6\\mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\mypaint\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\network-programming-lab-master\\lab06\\mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\mypaint\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|c:\\users\\thao\\downloads\\c\u002B\u002B\\network-programming-lab-master\\lab06\\mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7718B3-303F-4873-A80B-BA895E9D0C75}|MyPaint\\MyPaint.csproj|solutionrelative:mypaint\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,61 +35,61 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SocketData.cs",
-              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\SocketData.cs",
-              "RelativeDocumentMoniker": "MyPaint\\SocketData.cs",
-              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\SocketData.cs",
-              "RelativeToolTip": "MyPaint\\SocketData.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Client.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\MyPaint\\Client.cs",
+              "RelativeDocumentMoniker": "MyPaint\\Client.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\MyPaint\\Client.cs [Design]",
+              "RelativeToolTip": "MyPaint\\Client.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T08:00:42.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-24T16:46:45.714Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Client.cs",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\MyPaint\\Client.cs",
               "RelativeDocumentMoniker": "MyPaint\\Client.cs",
-              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Client.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\MyPaint\\Client.cs",
               "RelativeToolTip": "MyPaint\\Client.cs",
-              "ViewState": "AQIAAKMAAAAAAAAAAAAAwLAAAAA3AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAP0AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T08:10:51.021Z",
+              "WhenOpened": "2024-06-24T15:55:27.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Client.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Client.cs",
-              "RelativeDocumentMoniker": "MyPaint\\Client.cs",
-              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Client.cs [Design]",
-              "RelativeToolTip": "MyPaint\\Client.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\MyPaint\\Program.cs",
+              "RelativeDocumentMoniker": "MyPaint\\Program.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\MyPaint\\Program.cs",
+              "RelativeToolTip": "MyPaint\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T07:57:18.01Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-24T15:53:15.557Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Server.cs",
-              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Server.cs",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\MyPaint\\Server.cs",
               "RelativeDocumentMoniker": "MyPaint\\Server.cs",
-              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Server.cs",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\MyPaint\\Server.cs",
               "RelativeToolTip": "MyPaint\\Server.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAYwJYAAAAAAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAArwFIAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T08:01:22.325Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Server.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Server.cs",
+              "DocumentMoniker": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\MyPaint\\Server.cs",
               "RelativeDocumentMoniker": "MyPaint\\Server.cs",
-              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\network-programming-lab-master\\Lab06\\MyPaint\\Server.cs [Design]",
+              "ToolTip": "C:\\Users\\Thao\\Downloads\\c\u002B\u002B\\Lab\\LTMCB\\Lab6\\MyPaint\\Server.cs [Design]",
               "RelativeToolTip": "MyPaint\\Server.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T07:57:16.503Z",
