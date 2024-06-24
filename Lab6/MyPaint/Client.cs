@@ -10,6 +10,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using Org.BouncyCastle.Bcpg;
+using System.Collections.Generic;
 
 public enum DataType
 {
@@ -23,10 +24,10 @@ namespace MyPaint
     {
         Point currentPos = new Point();
         Point oldPos = new Point();
-
+        private Point offset;
         Pen pen = new Pen(Color.Red, 5);
         Pen eraser = new Pen(Color.White, 5);
-
+        
         Graphics graph;
         Bitmap surface;
         TcpClient client;
@@ -37,7 +38,10 @@ namespace MyPaint
         private PictureBox pictureBox;
         private bool isDragging = false;
         private bool isResizing = false;
-        private Point lastMousePosition;
+        private Point lastMousePosition;    
+        private List<PictureBox> images = new List<PictureBox>();
+
+
         public frm_Client()
         {
             InitializeComponent();
@@ -232,9 +236,9 @@ namespace MyPaint
                                 Image = Image.FromStream(ms),
                                 SizeMode = PictureBoxSizeMode.AutoSize,
                             };
-                            pictureBox.MouseDown += PictureBox_MouseDown;
-                            pictureBox.MouseMove += PictureBox_MouseMove;
-                            pictureBox.MouseUp += PictureBox_MouseUp;
+                            pictureBox.MouseDown += new MouseEventHandler(PictureBox_MouseDown);
+                            pictureBox.MouseMove += new MouseEventHandler(PictureBox_MouseMove);
+                            pictureBox.MouseUp += new MouseEventHandler(PictureBox_MouseUp);
                             AddImg(pictureBox);
                         }
                     }
@@ -290,24 +294,30 @@ namespace MyPaint
             pictureBox.MouseMove += new MouseEventHandler(PictureBox_MouseMove);
             pictureBox.MouseUp += new MouseEventHandler(PictureBox_MouseUp);
             panel1.Controls.Add(pictureBox);
+            images.Add(pictureBox);
             SendPicture(pictureBox.Image);
         }
 
+        //private void Delete(object sender, KeyEventArgs e)
+        //{
+        //    if(e.KeyCode == Keys.Delete)
+        //    {
+        //        images.Remove(lastSelected);
+        //        lastSelected.Dispose();
 
+        //    }
+        //}
 
         private void PictureBox_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (e.Location.X >= pictureBox.Width - 10 && e.Location.Y >= pictureBox.Height - 10)
-                {
-                    isResizing = true;
-                }
-                else
-                {
-                    isDragging = true;
-                }
-                lastMousePosition = e.Location;
+                PictureBox pictureBox = sender as PictureBox;
+                isDragging = true;
+                offset = e.Location;
+                // Bring the clicked PictureBox to front
+                pictureBox.BringToFront();
+                //lastSelected = pictureBox;
             }
         }
 
@@ -315,13 +325,9 @@ namespace MyPaint
         {
             if (isDragging)
             {
-                pictureBox.Left += e.X - lastMousePosition.X;
-                pictureBox.Top += e.Y - lastMousePosition.Y;
-            }
-            else if (isResizing)
-            {
-                pictureBox.Width += e.X - lastMousePosition.X;
-                pictureBox.Height += e.Y - lastMousePosition.Y;
+                PictureBox pictureBox = sender as PictureBox;
+                pictureBox.Left = e.X + pictureBox.Left - offset.X;
+                pictureBox.Top = e.Y + pictureBox.Top - offset.Y;
             }
         }
 
@@ -330,13 +336,12 @@ namespace MyPaint
             if (e.Button == MouseButtons.Left)
             {
                 isDragging = false;
-                isResizing = false;
             }
         }
 
         private void AddImg(PictureBox pictureBox)
         {
-            if(this.InvokeRequired)
+            if(this.panel1.InvokeRequired)
             {
                 this.BeginInvoke((MethodInvoker)delegate ()
                 {
@@ -347,6 +352,7 @@ namespace MyPaint
             {
                 this.panel1.Controls.Add(pictureBox);
             }
+            images.Add(pictureBox);
         }
     }
 
