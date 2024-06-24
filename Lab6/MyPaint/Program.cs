@@ -16,7 +16,7 @@ namespace MyPaint
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Server(new MailRepository()));
+            Application.Run(new frm_Server());
         }
     }
 }

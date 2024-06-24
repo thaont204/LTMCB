@@ -8,7 +8,14 @@ using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
+using System.Threading.Tasks;
+using Org.BouncyCastle.Bcpg;
+
+public enum DataType
+{
+    DrawingData = 1,
+    ImageData = 2
+}
 
 namespace MyPaint
 {
@@ -22,20 +29,19 @@ namespace MyPaint
 
         Graphics graph;
         Bitmap surface;
-
-        IPEndPoint iep; 
-        Socket client;
-        SocketData data;
+        TcpClient client;
 
         string fileName = "Picture";
         int index = 0;
         int width;
-
+        private PictureBox pictureBox;
+        private bool isDragging = false;
+        private bool isResizing = false;
+        private Point lastMousePosition;
         public frm_Client()
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
-            Connect();
 
             surface = new Bitmap(panel1.Width, panel1.Height);
             graph = Graphics.FromImage(surface);
@@ -75,8 +81,8 @@ namespace MyPaint
                 currentPos = e.Location;
                 graph.DrawLine(pen, oldPos, currentPos);
 
-                data = new SocketData(pen.Color, width, oldPos, currentPos);
-                Send();
+                SocketData data = new SocketData(pen.Color, width, oldPos, currentPos);
+                Send(data);
 
                 oldPos = currentPos;
                 panel1.Invalidate();
@@ -86,8 +92,8 @@ namespace MyPaint
                 currentPos = e.Location;
                 graph.DrawLine(eraser, oldPos, currentPos);
 
-                data = new SocketData(eraser.Color, width, oldPos, currentPos);
-                Send();
+                SocketData data = new SocketData(eraser.Color, width, oldPos, currentPos);
+                Send(data);
 
                 oldPos = currentPos;
                 panel1.Invalidate();
@@ -110,80 +116,241 @@ namespace MyPaint
             this.Hide();
         }
 
+        private void btn_Picture_Click(object sender, EventArgs e)
+        {
+            FormBrowser fb = new FormBrowser();
+            fb.Show();
+        }
         private void frm_Client_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Close();
-        }
-
-        private void Connect()
-        {
-            iep = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
-            client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
-            try { client.Connect(iep); }
-            catch (Exception err) 
-            { 
-                MessageBox.Show(err.Message);
-                return;
-            }
-
-            Thread Listen = new Thread(Receive);
-            Listen.IsBackground = true;
-            Listen.Start();
-        }
-
-        private void Close()
         {
             client.Close();
         }
 
-        private void Send()
+        public async Task Connect()
         {
-            if (client == null) return;
-            byte[] sendedData = SerializeData(data);
-            client.Send(sendedData);
+
+            try 
+            {
+                client = new TcpClient();
+                await client.ConnectAsync(IPAddress.Parse("127.0.0.1"), 9999);
+                if (client.Connected)
+                {
+                    await Task.Run(() => { Receive(); });
+                    this.Show();
+                }
+                
+            }
+            catch (Exception err) 
+            { 
+                MessageBox.Show(err.Message);
+            }
+
         }
 
-        private void Receive()
+
+        private void Send(SocketData drawingData)
         {
-            
             try
             {
-                while (true)
+                if (client == null || !client.Connected)
                 {
-                    byte[] receivedData = new byte[1024]; // 1 lần nhận tin là cỡ bao nhiêu
-                    client.Receive(receivedData);
-                    data = (SocketData)DeserializeData(receivedData);
+                    Console.WriteLine("Client is not connected.");
+                    return;
+                }
 
-                    graph.DrawLine(new Pen(data.PenColor, data.Width), data.OldPos, data.CurrentPos);
-                    panel1.Invalidate();
+                NetworkStream stream = client.GetStream();
+
+                // Serialize drawingData to byte array
+                byte[] data = SerializeData(drawingData);
+                Packet packet = new Packet();
+                packet.Write((int)DataType.DrawingData);
+                packet.Write(data);
+                packet.WriteLength();
+
+                // Send the actual data
+                stream.WriteAsync(packet.ToArray(), 0, packet.Length());
+                packet.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error sending drawing data: " + ex.Message);
+                // Handle the error as needed (e.g., log, close connection)
+            }
+        }
+
+
+        private async void SendPicture(System.Drawing.Image img)
+        {
+            if (client == null) return;
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, ImageFormat.Jpeg);
+                byte[] imgBytes = ms.ToArray();
+
+                Packet packet = new Packet();
+                packet.Write((int)DataType.ImageData);
+                packet.Write(imgBytes);
+                packet.WriteLength();
+
+                await client.GetStream().WriteAsync(packet.ToArray(), 0, packet.Length());
+                packet.Dispose();
+            }
+        }
+
+
+
+        private async void Receive()
+        {
+            NetworkStream stream = client.GetStream();
+            
+            while (true)
+            {
+                byte[] data = new byte[4096*10];
+                await stream.ReadAsync(data, 0, data.Length);
+                try
+                {
+                    Packet packet = new Packet(data);
+                    int len = packet.ReadInt();
+                    DataType dataType = (DataType)packet.ReadInt();
+
+                    if (dataType == DataType.DrawingData)
+                    {
+                        byte[] receivedData = packet.ReadBytes(24); // Subtract header
+                        SocketData drawingData = (SocketData)DeserializeDrawingData(receivedData);
+                        graph.DrawLine(new Pen(drawingData.PenColor, drawingData.Width), drawingData.OldPos, drawingData.CurrentPos);
+                        panel1.Invalidate();
+                    }
+                    else if (dataType == DataType.ImageData)
+                    {
+                        byte[] receivedData = packet.ReadBytes(len - 4); // Subtract header 
+
+                        using (MemoryStream ms = new MemoryStream(receivedData))
+                        {
+                            PictureBox pictureBox = new PictureBox()
+                            {
+                                Image = Image.FromStream(ms),
+                                SizeMode = PictureBoxSizeMode.AutoSize,
+                            };
+                            pictureBox.MouseDown += PictureBox_MouseDown;
+                            pictureBox.MouseMove += PictureBox_MouseMove;
+                            pictureBox.MouseUp += PictureBox_MouseUp;
+                            AddImg(pictureBox);
+                        }
+                    }
+                }
+                
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error in Receive method: " + ex.Message);
+                    // Handle exceptions or close the connection
+                    Close();
                 }
             }
-            catch { Close(); }
+
         }
 
-        /// <summary>
-        /// Nén đối tượng thành mảng byte[]
-        /// </summary>
-        public byte[] SerializeData(Object obj)
+        private SocketData DeserializeDrawingData(byte[] data)
         {
-            MemoryStream ms = new MemoryStream();
-            BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(ms, obj);
-            return ms.ToArray();
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                BinaryReader reader = new BinaryReader(ms);
+                Color penColor = Color.FromArgb(reader.ReadInt32());
+                int width = reader.ReadInt32();
+                Point oldPos = new Point(reader.ReadInt32(), reader.ReadInt32());
+                Point currentPos = new Point(reader.ReadInt32(), reader.ReadInt32());
+
+                return new SocketData(penColor, width, oldPos, currentPos);
+            }
         }
 
-        /// <summary>
-        /// Giải nén mảng byte[] thành đối tượng object
-        /// </summary>
-        public object DeserializeData(byte[] byteArray)
+        private byte[] SerializeData(SocketData drawingData)
         {
-            MemoryStream ms = new MemoryStream(byteArray);
-            BinaryFormatter bf = new BinaryFormatter();
-            ms.Position = 0;
-            return bf.Deserialize(ms);
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BinaryWriter writer = new BinaryWriter(ms);
+                writer.Write(drawingData.PenColor.ToArgb());
+                writer.Write(drawingData.Width);
+                writer.Write(drawingData.OldPos.X);
+                writer.Write(drawingData.OldPos.Y);
+                writer.Write(drawingData.CurrentPos.X);
+                writer.Write(drawingData.CurrentPos.Y);
+                return ms.ToArray();
+            }
+        }
+
+        private void btn_Paste_Click(object sender, EventArgs e)
+        {
+            pictureBox = new PictureBox
+            {
+                Image = Clipboard.GetImage(),
+                SizeMode = PictureBoxSizeMode.AutoSize,
+            };
+            pictureBox.MouseDown += new MouseEventHandler(PictureBox_MouseDown);
+            pictureBox.MouseMove += new MouseEventHandler(PictureBox_MouseMove);
+            pictureBox.MouseUp += new MouseEventHandler(PictureBox_MouseUp);
+            panel1.Controls.Add(pictureBox);
+            SendPicture(pictureBox.Image);
+        }
+
+
+
+        private void PictureBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (e.Location.X >= pictureBox.Width - 10 && e.Location.Y >= pictureBox.Height - 10)
+                {
+                    isResizing = true;
+                }
+                else
+                {
+                    isDragging = true;
+                }
+                lastMousePosition = e.Location;
+            }
+        }
+
+        private void PictureBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                pictureBox.Left += e.X - lastMousePosition.X;
+                pictureBox.Top += e.Y - lastMousePosition.Y;
+            }
+            else if (isResizing)
+            {
+                pictureBox.Width += e.X - lastMousePosition.X;
+                pictureBox.Height += e.Y - lastMousePosition.Y;
+            }
+        }
+
+        private void PictureBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
+                isResizing = false;
+            }
+        }
+
+        private void AddImg(PictureBox pictureBox)
+        {
+            if(this.InvokeRequired)
+            {
+                this.BeginInvoke((MethodInvoker)delegate ()
+                {
+                    this.panel1.Controls.Add(pictureBox);
+                });
+            }
+            else
+            {
+                this.panel1.Controls.Add(pictureBox);
+            }
         }
     }
+
+
 
     public class IPanel : Panel
     {

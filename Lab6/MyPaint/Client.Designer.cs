@@ -38,6 +38,8 @@
             this.btn_END = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Color = new System.Windows.Forms.Button();
+            this.btn_Picture = new System.Windows.Forms.Button();
+            this.btn_Paste = new System.Windows.Forms.Button();
             this.panel1 = new MyPaint.IPanel();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -122,7 +124,7 @@
             this.btn_END.Location = new System.Drawing.Point(16, 503);
             this.btn_END.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_END.Name = "btn_END";
-            this.btn_END.Size = new System.Drawing.Size(158, 48);
+            this.btn_END.Size = new System.Drawing.Size(140, 48);
             this.btn_END.TabIndex = 2;
             this.btn_END.Text = "END";
             this.btn_END.UseVisualStyleBackColor = true;
@@ -141,14 +143,36 @@
             // btn_Color
             // 
             this.btn_Color.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Color.Location = new System.Drawing.Point(223, 503);
+            this.btn_Color.Location = new System.Drawing.Point(162, 503);
             this.btn_Color.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Color.Name = "btn_Color";
-            this.btn_Color.Size = new System.Drawing.Size(158, 48);
+            this.btn_Color.Size = new System.Drawing.Size(140, 48);
             this.btn_Color.TabIndex = 4;
             this.btn_Color.Text = "COLOR";
             this.btn_Color.UseVisualStyleBackColor = true;
             this.btn_Color.Click += new System.EventHandler(this.btn_Color_Click);
+            // 
+            // btn_Picture
+            // 
+            this.btn_Picture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Picture.Location = new System.Drawing.Point(308, 503);
+            this.btn_Picture.Name = "btn_Picture";
+            this.btn_Picture.Size = new System.Drawing.Size(140, 48);
+            this.btn_Picture.TabIndex = 5;
+            this.btn_Picture.Text = "BROWSE";
+            this.btn_Picture.UseVisualStyleBackColor = true;
+            this.btn_Picture.Click += new System.EventHandler(this.btn_Picture_Click);
+            // 
+            // btn_Paste
+            // 
+            this.btn_Paste.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Paste.Location = new System.Drawing.Point(454, 503);
+            this.btn_Paste.Name = "btn_Paste";
+            this.btn_Paste.Size = new System.Drawing.Size(134, 48);
+            this.btn_Paste.TabIndex = 6;
+            this.btn_Paste.Text = "PASTE IN";
+            this.btn_Paste.UseVisualStyleBackColor = true;
+            this.btn_Paste.Click += new System.EventHandler(this.btn_Paste_Click);
             // 
             // panel1
             // 
@@ -170,6 +194,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 562);
+            this.Controls.Add(this.btn_Paste);
+            this.Controls.Add(this.btn_Picture);
             this.Controls.Add(this.btn_Color);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_END);
@@ -199,6 +225,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Color;
         private IPanel panel1;
+        private System.Windows.Forms.Button btn_Picture;
+        private System.Windows.Forms.Button btn_Paste;
     }
 }
 

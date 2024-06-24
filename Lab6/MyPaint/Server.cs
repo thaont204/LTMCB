@@ -1,150 +1,178 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyPaint
 {
     public partial class frm_Server : Form
     {
-        MailRepository mailRepository;
+        private TcpListener server;
+        private List<TcpClient> clientList;
+        private int maxClients = 5; // Maximum number of clients allowed
 
-        IPEndPoint iep;
-        Socket server;
-        SocketData data;
-
-        List<Socket> clientList;
-        int max_clients = 5;
-
-        public frm_Server(MailRepository mailRepository)
+        public frm_Server()
         {
-            InitializeComponent();
-            this.mailRepository = mailRepository;
-            mailRepository.ConnectStmpServer("smtp.gmail.com", 465, true);
             CheckForIllegalCrossThreadCalls = false;
-            Connect();
+            InitializeComponent();
+            clientList = new List<TcpClient>();
+            StartServer();
         }
 
-        private void btn_AddClient_Click(object sender, EventArgs e)
+        private async void StartServer()
         {
-            if (clientList.Count >= max_clients)
+            try
             {
-                mailRepository.SendMail("Cảnh báo", "Số lượng client đạt đến giới hạn", "22521371@gm.uit.edu.vn");
+                server = new TcpListener(IPAddress.Any, 9999);
+                server.Start();
 
+                await AcceptClients();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error starting server: " + ex.Message);
+            }
+        }
+
+        private async Task AcceptClients()
+        {
+            while (true)
+            {
+                TcpClient client = await server.AcceptTcpClientAsync();
+
+                if (client.Connected)
+                {
+                    clientList.Add(client);
+                    lbl_NumClients.Text = clientList.Count.ToString();
+                    await Task.Run(() => { ReceiveAsync(client); });
+                }
+            }
+        }
+
+        private async void ReceiveAsync(TcpClient tcpClient)
+        {
+            try
+            {
+                NetworkStream stream = tcpClient.GetStream();
+                byte[] buffer = new byte[4096*10];
+
+                while (true)
+                {
+                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+                    if (bytesRead == 0)
+                        throw new IOException(); // Connection closed gracefully by client
+
+                    // Handle received data (e.g., broadcast to other clients)
+                    await BroadcastAsync(buffer, tcpClient);
+                }
+            }
+            catch (IOException)
+            {
+                // Handle client disconnect
+                clientList.Remove(tcpClient);
+                lbl_NumClients.Text = clientList.Count.ToString();
+                tcpClient.Close();
+            }
+            catch (Exception ex)
+            {
+                LogError("Error receiving data: " + ex.Message);
+            }
+        }
+
+        private void UpdateClientCount()
+        {
+            if (lbl_NumClients.InvokeRequired)
+            {
+                lbl_NumClients.Invoke((Action)(() => lbl_NumClients.Text = clientList.Count.ToString()));
+            }
+            else
+            {
+                lbl_NumClients.Text = clientList.Count.ToString();
+            }
+        }
+
+        private async void btn_AddClient_Click(object sender, EventArgs e)
+        {
+            if (clientList.Count >= maxClients)
+            {
                 MessageBox.Show("Quá số lượng client cho phép!");
                 return;
             }
 
             frm_Client frm = new frm_Client();
-            frm.Show();
+            await frm.Connect();
         }
+
+
+
 
         private void frm_Server_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Close();
+            CloseServer();
         }
 
-        private void Connect()
+        private void CloseServer()
         {
-            iep = new IPEndPoint(IPAddress.Any, 9999);
-            server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            clientList = new List<Socket>();
-
-            server.Bind(iep);
-            Thread AcceptClient = new Thread(() =>
+            foreach (TcpClient client in clientList)
             {
-                try
-                {
-                    while (true)
-                    {
-                        server.Listen(10); // Đợi kết nối client trong 10s nếu ko có thì bỏ
-                        Socket client;
-                        
-                        try { client = server.Accept(); }
-                        catch (Exception err)
-                        {
-                            MessageBox.Show(err.Message);
-                            return;
-                        }
-
-                        clientList.Add(client);
-                        lbl_NumClients.Text = clientList.Count.ToString();
-
-                        Thread Listen = new Thread(Receive);
-                        Listen.IsBackground = true;
-                        Listen.Start(client);
-                    }
-                }
-                catch
-                {
-                    iep = new IPEndPoint(IPAddress.Any, 9999);
-                    server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                }
-            });
-
-            AcceptClient.IsBackground = true; // Để khi chương trình tắt ngang thì Thread cũng tự tắt
-            AcceptClient.Start();
-        }
-
-        private void Close()
-        {
-            server.Close();
-        }
-
-        private void Send(Socket client)
-        {
-            if (client == null) return;
-            byte[] sendedData = SerializeData(data);
-            client.Send(sendedData);
-        }
-
-        private void Receive(object obj)
-        {
-            Socket client = obj as Socket;
-            try
-            {
-                while (true)
-                {
-                    byte[] receivedData = new byte[1024]; // 1 lần nhận tin là cỡ bao nhiêu
-                    client.Receive(receivedData);
-                    data = (SocketData)DeserializeData(receivedData);
-
-                    foreach (Socket item in clientList) 
-                        if (item != client) Send(item);
-                }
-            }
-            catch
-            {
-                clientList.Remove(client);
-                lbl_NumClients.Text = clientList.Count.ToString();
                 client.Close();
             }
+            server.Stop();
         }
 
-        /// <summary>
-        /// Nén đối tượng thành mảng byte[]
-        /// </summary>
-        public byte[] SerializeData(Object obj)
+        // Serialization and deserialization methods
+        public byte[] SerializeData(object obj)
         {
-            MemoryStream ms = new MemoryStream();
-            BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(ms, obj);
-            return ms.ToArray();
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(ms, obj);
+                return ms.ToArray();
+            }
         }
 
-        /// <summary>
-        /// Giải nén mảng byte[] thành đối tượng object
-        /// </summary>
         public object DeserializeData(byte[] byteArray)
         {
-            MemoryStream ms = new MemoryStream(byteArray);
-            BinaryFormatter bf = new BinaryFormatter();
-            ms.Position = 0;
-            return bf.Deserialize(ms);
+            using (MemoryStream ms = new MemoryStream(byteArray))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                return bf.Deserialize(ms);
+            }
+        }
+        private async Task BroadcastAsync(byte[] data, TcpClient senderClient)
+        {
+            foreach (TcpClient client in clientList)
+            {
+
+                if (client != senderClient)
+                {
+                    NetworkStream clientStream = client.GetStream();
+                    await clientStream.WriteAsync(data, 0, data.Length); // Echo data to all clients except sender
+                }
+            }
+        }
+
+        // Other methods (UpdateClientCount, btn_AddClient_Click, frm_Server_FormClosing, CloseServer, SerializeData, DeserializeData) remain the same
+
+        // Helper method for error logging
+        private void LogError(string errorMessage)
+        {
+            MessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            // Optionally, log to a file
+            string logFilePath = "server_log.txt";
+            File.AppendAllText(logFilePath, DateTime.Now.ToString() + ": " + errorMessage + Environment.NewLine);
+        }
+
+        private void frm_Server_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
